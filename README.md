@@ -1,24 +1,24 @@
 # Tree Demo
 
-Demo interactiva en Three.js (WebGPU) de un árbol cuyas hojas se desprenden al moverlo con el puntero, caen y vuelven a crecer en las ramas.
+Interactive Three.js (WebGPU) demo of a tree whose leaves come loose when you shake it with the pointer, fall, and grow back on the branches.
 
-## Ejecutar
+## Run
 
-Necesita Node.js y un navegador con WebGPU (Chrome o Edge recientes).
+Requires Node.js and a browser with WebGPU support (recent Chrome or Edge).
 
 ```bash
 npm install
 npm run dev
 ```
 
-Abre la dirección que muestra Vite (por defecto `http://localhost:5173/`).
+Open the address Vite prints (by default `http://localhost:5173/`).
 
-## Uso
+## Usage
 
-- Pasa el puntero por las ramas para sacudir el árbol; arrastra para girar la cámara.
-- El panel permite ajustar la cantidad de hojas, activar o desactivar la caída y la regeneración, reiniciar y sacudir el árbol.
-- Añade `#debug` a la URL para ver todos los ajustes y los contadores.
+- Move the pointer over the branches to shake the tree; drag to orbit the camera.
+- The panel lets you set the number of leaves, turn falling and regrowth on or off, reset, and shake the whole tree.
+- Add `#debug` to the URL to show every setting and the particle counters.
 
-## Tecnología
+## Tech
 
-Three.js 0.186 con `WebGPURenderer` y TSL: la simulación de las hojas se ejecuta en la GPU con compute shaders. Build con Vite.
+Three.js 0.186 with `WebGPURenderer` and TSL: the leaf simulation runs on the GPU in compute shaders. Built with Vite.
