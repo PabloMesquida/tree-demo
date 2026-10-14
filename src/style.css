@@ -20,11 +20,52 @@ body
     outline: none;
 }
 
+.title
+{
+    position: fixed;
+    left: 16px;
+    top: 14px;
+    pointer-events: none;
+}
+
+.title h1
+{
+    margin: 0;
+    color: #e3eaee;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.title a
+{
+    color: #8bd17c;
+    font-size: 11px;
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.title a:hover,
+.title a:focus-visible
+{
+    text-decoration: underline;
+}
+
+/* On narrow screens the title moves to the bottom so it does not collide with the panel */
+@media (max-width: 560px)
+{
+    .title
+    {
+        top: auto;
+        bottom: 14px;
+    }
+}
+
 .panel
 {
     position: fixed;
     left: 8px;
-    top: 8px;
+    top: 66px;
     padding: 6px 9px;
     border-radius: 4px;
     background: rgba(12, 15, 18, 0.72);

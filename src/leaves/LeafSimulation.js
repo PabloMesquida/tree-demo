@@ -36,7 +36,6 @@ export const STATE_GROWING = 2
 // of losing a leaf does not depend on the frame rate.
 const DECISION_RATE = 20
 
-const GRIP_SPREAD = 4 // a leaf lets go between 1x and (1 + spread)x the threshold
 const MIN_ATTACHED_TIME = 1 // seconds a regrown leaf is safe
 const MAX_INHERITED_SPEED = 5
 const MAX_FALL_TIME = 12
@@ -86,6 +85,7 @@ export class LeafSimulation
             regenEnabled: uniform(1),
             detachProbability: uniform(0.25),
             detachThreshold: uniform(1.2),
+            gripSpread: uniform(4), // a leaf lets go between 1x and (1 + spread)x the threshold
             gravity: uniform(4),
             wind: uniform(new THREE.Vector3()),
             growDuration: uniform(1.5),
@@ -167,7 +167,7 @@ export class LeafSimulation
                 timer.addAssign(u.deltaTime)
 
                 const shake = bones.shakes.element(boneIndex)
-                const grip = u.detachThreshold.mul(randomCycle(1).mul(GRIP_SPREAD).add(1))
+                const grip = u.detachThreshold.mul(randomCycle(1).mul(u.gripSpread).add(1))
                 const roll = hash(leafKey.add(u.tick.mul(uint(32452843))).add(uint(999331)))
 
                 const letGo = u.fallEnabled.greaterThan(0.5)

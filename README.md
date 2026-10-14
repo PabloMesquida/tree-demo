@@ -2,6 +2,8 @@
 
 Interactive Three.js (WebGPU) demo of a tree whose leaves come loose when you shake it with the pointer, fall, and grow back on the branches.
 
+![Leaves falling off the tree after a shake](screenshot.jpg)
+
 ## Run
 
 Requires Node.js and a browser with WebGPU support (recent Chrome or Edge).

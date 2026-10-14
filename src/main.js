@@ -219,6 +219,7 @@ async function main()
         u.regenEnabled.value = params.regeneration ? 1 : 0
         u.detachProbability.value = params.detachProbability
         u.detachThreshold.value = params.detachThreshold
+        u.gripSpread.value = params.gripVariation
         u.gravity.value = params.gravity
         u.wind.value.set(Math.cos(angle), 0, -Math.sin(angle)).multiplyScalar(params.windStrength)
         u.growDuration.value = params.growDuration

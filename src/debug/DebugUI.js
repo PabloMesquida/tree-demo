@@ -32,6 +32,7 @@ export class DebugUI
         leaves.add(params, 'regeneration').name('regeneración').onChange(onChange)
         leaves.add(params, 'detachProbability', 0, 1, 0.01).name('prob. desprendimiento').onChange(onChange)
         leaves.add(params, 'detachThreshold', 0.1, 6, 0.05).name('umbral de sacudida').onChange(onChange)
+        leaves.add(params, 'gripVariation', 0, 6, 0.1).name('variación del agarre').onChange(onChange)
         leaves.add(params, 'gravity', 0, 15, 0.1).name('gravedad').onChange(onChange)
         leaves.add(params, 'windStrength', 0, 4, 0.05).name('viento').onChange(onChange)
         leaves.add(params, 'windAngle', -180, 180, 1).name('dirección viento').onChange(onChange)

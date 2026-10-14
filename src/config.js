@@ -17,7 +17,7 @@ const intOption = (name, fallback, min, max) =>
 const DEFAULT_TREE = 'glb' // 'glb' or 'procedural'
 const DEFAULT_GLB = './models/sapling_test12_b.glb'
 
-const count = intOption('count', 1000, 0, 200000)
+const count = intOption('count', 5000, 0, 200000)
 
 export const options = {
     // #debug in the URL shows every setting, the counters and the profiler
@@ -56,7 +56,8 @@ export const params = {
     leafFall: true,
     regeneration: true,
     detachProbability: 0.25, // chance per decision tick for a leaf whose branch shakes past its grip
-    detachThreshold: 1.2, // branch shake (rad/s) under which no leaf lets go
+    detachThreshold: 0.5, // branch shake (rad/s) under which no leaf lets go
+    gripVariation: 0.5, // each leaf needs between 1x and (1 + this)x the threshold: low enough that every leaf can fall
     gravity: 4,
     windStrength: 0.6,
     windAngle: 20, // degrees around Y, 0 = +X
