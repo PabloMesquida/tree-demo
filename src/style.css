@@ -1,0 +1,140 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: hidden;
+    background: #1b2126;
+    font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+}
+
+.threejs
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+.panel
+{
+    position: fixed;
+    left: 8px;
+    top: 8px;
+    padding: 6px 9px;
+    border-radius: 4px;
+    background: rgba(12, 15, 18, 0.72);
+    color: #cfd8dc;
+    font-size: 11px;
+    line-height: 1.55;
+    pointer-events: none;
+    white-space: pre;
+}
+
+.panel .attached { color: #8bd17c; }
+.panel .falling { color: #ffb454; }
+.panel .growing { color: #6fd3ff; }
+.panel .bad { color: #ff6b6b; }
+.panel .dim { color: #7d8a91; }
+
+.controls
+{
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    display: grid;
+    gap: 6px;
+    width: 220px;
+    max-width: calc(100vw - 32px);
+    padding: 9px 11px;
+    border-radius: 4px;
+    background: rgba(12, 15, 18, 0.72);
+    color: #cfd8dc;
+    font-size: 11px;
+}
+
+.controls .row
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.controls .row span
+{
+    flex: 1;
+}
+
+.controls input[type="range"]
+{
+    flex: 2;
+    min-width: 0;
+    accent-color: #8bd17c;
+}
+
+.controls output
+{
+    width: 3.5em;
+    text-align: right;
+    color: #8bd17c;
+}
+
+.controls input[type="checkbox"]
+{
+    accent-color: #8bd17c;
+}
+
+.controls .actions
+{
+    display: flex;
+    gap: 6px;
+    margin-top: 2px;
+}
+
+.controls button
+{
+    flex: 1;
+    padding: 4px 0;
+    border: 1px solid #3a4650;
+    border-radius: 3px;
+    background: #20282e;
+    color: #cfd8dc;
+    font: inherit;
+    cursor: pointer;
+}
+
+.controls button:hover
+{
+    background: #2b363e;
+}
+
+.controls[hidden]
+{
+    display: none;
+}
+
+.fatal
+{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: #1b2126;
+    color: #ffd7d7;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.fatal[hidden],
+.panel[hidden]
+{
+    display: none;
+}

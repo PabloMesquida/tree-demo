@@ -1,0 +1,24 @@
+# Dependencies and builds
+node_modules/
+dist/
+
+# Local only: Blender scripts and the detailed documentation
+tools/
+docs/
+
+# Blender working files
+*.blend
+*.blend1
+
+# Trees exported while iterating. Only the one the demo loads by default is
+# versioned; if DEFAULT_GLB in src/config.js changes, update this exception.
+public/models/sapling_*.glb
+!public/models/sapling_test12_b.glb
+
+# Recordings
+*.mp4
+*.mov
+
+# OS
+.DS_Store
+Thumbs.db

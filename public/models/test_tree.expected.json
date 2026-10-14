@@ -1,0 +1,97 @@
+{
+  "preset": "tree",
+  "blender": "5.2.0 LTS",
+  "bones": [
+    {
+      "name": "root",
+      "parent": null,
+      "head": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "trunk_01",
+      "parent": "root",
+      "head": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "trunk_02",
+      "parent": "trunk_01",
+      "head": [
+        0.0,
+        1.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "trunk_03",
+      "parent": "trunk_02",
+      "head": [
+        0.05,
+        2.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "branch_01_01",
+      "parent": "trunk_02",
+      "head": [
+        0.03,
+        1.6,
+        -0.0
+      ]
+    },
+    {
+      "name": "branch_01_02",
+      "parent": "branch_01_01",
+      "head": [
+        0.75,
+        2.0,
+        -0.1
+      ]
+    },
+    {
+      "name": "branch_02_01",
+      "parent": "trunk_03",
+      "head": [
+        0.03,
+        2.4,
+        -0.02
+      ]
+    },
+    {
+      "name": "branch_02_02",
+      "parent": "branch_02_01",
+      "head": [
+        -0.5,
+        2.85,
+        -0.45
+      ]
+    },
+    {
+      "name": "branch_03_01",
+      "parent": "trunk_03",
+      "head": [
+        0.0,
+        3.0,
+        -0.05
+      ]
+    },
+    {
+      "name": "branch_03_02",
+      "parent": "branch_03_01",
+      "head": [
+        0.15,
+        3.55,
+        0.5
+      ]
+    }
+  ],
+  "anchors": []
+}

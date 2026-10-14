@@ -1,0 +1,34 @@
+{
+  "preset": "minimal",
+  "blender": "5.2.0 LTS",
+  "bones": [
+    {
+      "name": "trunk_01",
+      "parent": null,
+      "head": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "branch_01_01",
+      "parent": "trunk_01",
+      "head": [
+        0.0,
+        1.1,
+        -0.0
+      ]
+    },
+    {
+      "name": "branch_01_02",
+      "parent": "branch_01_01",
+      "head": [
+        0.7,
+        1.5,
+        -0.0
+      ]
+    }
+  ],
+  "anchors": []
+}
